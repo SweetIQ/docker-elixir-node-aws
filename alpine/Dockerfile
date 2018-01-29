@@ -1,6 +1,6 @@
 FROM elixir:1.6.0-alpine
 
-ENV NODE_VERSION=v8.9.0
+ENV NODE_VERSION=v8.9.1
 ENV NPM_VERSION=5
 
 # For base builds
