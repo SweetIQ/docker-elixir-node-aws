@@ -1,4 +1,4 @@
-FROM elixir:1.5.0
+FROM elixir:1.5.1
 
 ENV NVM_DIR /root/.nvm
 ENV NODE_VERSION=8.9.0
