@@ -1,9 +1,11 @@
 FROM elixir:1.6.0-slim
 
+ENV NODE_VERSION 8.9.2
+
 RUN groupadd --gid 1000 node \
   && useradd --uid 1000 --gid node --shell /bin/bash --create-home node
 
-# install awscli
+# install python and curl
 RUN apt-get update \
     && apt-get install -y --no-install-recommends python-dev curl \
     && apt-get clean
@@ -24,8 +26,6 @@ RUN set -ex \
     gpg --keyserver keyserver.pgp.com --recv-keys "$key" || \
     gpg --keyserver ha.pool.sks-keyservers.net --recv-keys "$key" ; \
   done
-
-ENV NODE_VERSION 9.4.0
 
 RUN buildDeps='xz-utils' \
     && ARCH= && dpkgArch="$(dpkg --print-architecture)" \
