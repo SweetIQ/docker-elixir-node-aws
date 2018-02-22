@@ -1,4 +1,4 @@
-FROM elixir:1.6.0-slim
+FROM elixir:1.6.1-slim
 
 RUN groupadd --gid 1000 node \
   && useradd --uid 1000 --gid node --shell /bin/bash --create-home node
