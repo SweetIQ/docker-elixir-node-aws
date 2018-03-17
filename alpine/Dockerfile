@@ -1,4 +1,4 @@
-FROM elixir:1.6.1-alpine
+FROM elixir:1.6.3-alpine
 
 ENV NODE_VERSION=v8.9.4
 ENV NPM_VERSION=5
